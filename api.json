@@ -1,20 +1,27 @@
 {
-	"task": [
+	"methods": [
 		{
-			"done": true,
-			"taskTitle": "Code furiously"
+			"name": "add_notes",
+			"params": "flags",
+			"description": "Add flags to messages in the currently folder. flags should be a list (e.g. [“important”, “deadline”])."
 		},
 		{
-			"done": true,
-			"taskTitle": "Do user study"
+			"name": "copy",
+			"params": "src_folder, dst_folder",
+			"description": "Copy this message from src_folder to dst_folder"
+
 		},
 		{
-			"done": true,
-			"taskTitle": "Write paper"
+			"name": "delete",
+			"params": "",
+			"description": "Delete one or more messages from the currently selected folder."
+
 		},
 		{
-			"done": false,
-			"taskTitle": "Have a life!!"
+			"name": "get_sender",
+			"params": "",
+			"description": "Return a sender of this message."
+
 		}
 	]
 }
