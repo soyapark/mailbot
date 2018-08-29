@@ -86,33 +86,5 @@
 			"example": ""
 
 		}
-	],
-	"folder": [
-		{
-			"name": "create_folder",
-			"params": "folder_name",
-			"description": "Create a new folder folder_name",
-			"example": ""
-		},
-		{
-			"name": "delete_folder",
-			"params": "folder_name",
-			"description": "Delete a folder folder_name",
-			"example": ""
-
-		},
-		{
-			"name": "list_folders",
-			"params": "",
-			"description": "Get a list of folders",
-			"example": ""
-		}
-		{
-			"name": "rename_folder",
-			"params": "old_name, new_name",
-			"description": "Change the name of a folder",
-			"example": ""
-
-		}
 	]
 }
