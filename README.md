@@ -1,0 +1,2 @@
+# mailbot
+Program your inbox!
