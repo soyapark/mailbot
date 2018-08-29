@@ -1,26 +1,88 @@
 {
-	"methods": [
+	"getter": [
 		{
-			"name": "add_notes",
-			"params": "flags",
-			"description": "Add flags to messages in the currently folder. flags should be a list (e.g. [“important”, “deadline”])."
-		},
-		{
-			"name": "copy",
-			"params": "src_folder, dst_folder",
-			"description": "Copy this message from src_folder to dst_folder"
+			"name": "get_content",
+			"params": "",
+			"description": "Return contents of this email",
+			"example": "print get_content()"
 
 		},
 		{
-			"name": "delete",
+			"name": "get_date",
 			"params": "",
-			"description": "Delete one or more messages from the currently selected folder."
+			"description": "Return arrival date of this email",
+			"example": ""
+
+		},
+		{
+			"name": "get_notes",
+			"params": "",
+			"description": "Return a list of notes of this email.",
+			"example": ""
 
 		},
 		{
 			"name": "get_sender",
 			"params": "",
-			"description": "Return a sender of this message."
+			"description": "Return a sender of this email.",
+			"example": ""
+
+		},
+		{
+			"name": "get_subject",
+			"params": "",
+			"description": "Return a subject of this email.",
+			"example": ""
+
+		},
+		{
+			"name": "get_recipients",
+			"params": "",
+			"description": "Return a list of recipients of this email.",
+			"example": ""
+
+		}
+	],
+	"methods": [
+		{
+			"name": "add_notes",
+			"params": "flags",
+			"description": "Add note to email in the currently folder. flags should be a list (e.g. [“important”, “deadline”]).",
+			"example": ""
+		},
+		{
+			"name": "copy",
+			"params": "src_folder, dst_folder",
+			"description": "Copy this email from src_folder to dst_folder",
+			"example": ""
+
+		},
+		{
+			"name": "delete",
+			"params": "",
+			"description": "Delete this email from the currently selected folder.",
+			"example": ""
+
+		},
+		{
+			"name": "mark_read",
+			"params": "is_read",
+			"description": "If is_read is true, then mark the email as read, otherwise mark it as unread.",
+			"example": ""
+
+		},
+		{
+			"name": "move",
+			"params": "src_folder, dst_folder",
+			"description": "Move this email from src_folder to dst_folder",
+			"example": ""
+
+		},
+		{
+			"name": "remove_notes",
+			"params": "flags",
+			"description": "Remove one or more flags from this email in the currently selected folder. flags should be a list of strings.",
+			"example": ""
 
 		}
 	]
