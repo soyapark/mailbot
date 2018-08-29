@@ -41,50 +41,5 @@
 			"example": ""
 
 		}
-	],
-	"methods": [
-		{
-			"name": "add_notes",
-			"params": "flags",
-			"description": "Add note to email in the currently folder.",
-			"example": [
-				"add_notes('[“important”, “deadline”]')"
-			]
-		},
-		{
-			"name": "copy",
-			"params": "src_folder, dst_folder",
-			"description": "Copy this email from src_folder to dst_folder",
-			"example": ""
-
-		},
-		{
-			"name": "delete",
-			"params": "",
-			"description": "Delete this email from the currently selected folder.",
-			"example": ""
-
-		},
-		{
-			"name": "mark_read",
-			"params": "is_read",
-			"description": "If is_read is true, then mark the email as read, otherwise mark it as unread.",
-			"example": ""
-
-		},
-		{
-			"name": "move",
-			"params": "src_folder, dst_folder",
-			"description": "Move this email from src_folder to dst_folder",
-			"example": ""
-
-		},
-		{
-			"name": "remove_notes",
-			"params": "flags",
-			"description": "Remove one or more flags from this email in the currently selected folder. flags should be a list of strings.",
-			"example": ""
-
-		}
 	]
 }
