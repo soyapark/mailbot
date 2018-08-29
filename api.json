@@ -13,7 +13,6 @@
 			"description": "Return arrival date of this email",
 			"example": ["print get_date()",">>> Wed, 29 Aug 2018 01:59:59 -0400"
 			]
-Ac
 		},
 		{
 			"name": "get_notes",
