@@ -52,7 +52,7 @@
 			"params": "flags",
 			"description": "Add note to email in the currently folder.",
 			"example": [
-				{"line": "add_notes('[“important”, “deadline”]')"}
+				{"line": "return add_notes('[“important”, “deadline”]')"}
 			]
 		},
 		{
