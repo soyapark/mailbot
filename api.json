@@ -11,7 +11,7 @@
 			"name": "get_date",
 			"params": "",
 			"description": "Return arrival date of this email",
-			"example": ["print get_date()", ">>> xxx"]
+			"example": [{"line": "print get_date()"}, {"line": ">>> xxx"}]
 
 		},
 		{
