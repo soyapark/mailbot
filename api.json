@@ -4,14 +4,14 @@
 			"name": "get_content",
 			"params": "",
 			"description": "Return contents of this email",
-			"example": "print get_content()\n test"
+			"example": ""
 
 		},
 		{
 			"name": "get_date",
 			"params": "",
 			"description": "Return arrival date of this email",
-			"example": ""
+			"example": "print get_date()\n>>>"
 
 		},
 		{
