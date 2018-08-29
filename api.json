@@ -106,7 +106,7 @@
 			"params": "",
 			"description": "Get a list of folders",
 			"example": ""
-		}
+		},
 		{
 			"name": "rename_folder",
 			"params": "old_name, new_name",
