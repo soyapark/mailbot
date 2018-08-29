@@ -50,8 +50,10 @@
 		{
 			"name": "add_notes",
 			"params": "flags",
-			"description": "Add note to email in the currently folder. flags should be a list (e.g. [“important”, “deadline”]).",
-			"example": ""
+			"description": "Add note to email in the currently folder.",
+			"example": [
+				{"line": "add_notes('[“important”, “deadline”]')"}
+			]
 		},
 		{
 			"name": "copy",
