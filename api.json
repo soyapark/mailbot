@@ -4,7 +4,7 @@
 			"name": "get_content",
 			"params": "",
 			"description": "Return contents of this email",
-			"example": "print get_content() <br>"
+			"example": "print get_content()\n"
 
 		},
 		{
