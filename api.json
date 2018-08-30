@@ -3,7 +3,7 @@
 		{
 			"name": "get_content",
 			"params": "",
-			"description": "Return contents of this email / thread. \n Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"description": "Return contents of this email / thread. \n\n Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
 			"example": "",
 			"thread": "get_contents",
 			"thread_params": "cond = True"
@@ -113,7 +113,7 @@
 			"description": "Move this email from src_folder to dst_folder. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
 			"example": [
 				"move('INBOX', 'conference')",
-				"",
+				" ",
 				"def from_soya():",
 				"   if 'Soya Park <soya@mit.edu>' in get_sender():",
 				"      return True",
