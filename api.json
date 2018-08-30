@@ -3,87 +3,133 @@
 		{
 			"name": "get_content",
 			"params": "",
-			"description": "Return contents of this email",
-			"example": ""
-
+			"description": "Return contents of this email / thread. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"example": "",
+			"thread": "get_contents",
+			"thread_params": "cond = True"
 		},
 		{
 			"name": "get_date",
 			"params": "",
-			"description": "Return arrival date of this email",
-			"example": ["print get_date()",">>> Wed, 29 Aug 2018 01:59:59 -0400"]
+			"description": "Return arrival date of this email / thread. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"example": [
+				"print get_date()",
+				">>> ['Wed, 29 Aug 2018 01:59:59 -0400']", 
+				"print get_dates()", 
+				">>> ['Wed, 29 Aug 2018 00:23:12 -0400', 'Wed, 29 Aug 2018 01:01:03 -0400', 'Wed, 29 Aug 2018 01:59:59 -0400']"
+			],
+			"thread": "get_dates",
+			"thread_params": "cond = True"
 		},
 		{
-			"name": "get_notes",
+			"name": "get_note",
 			"params": "",
-			"description": "Return a list of notes of this email.",
-			"example": ""
-
+			"description": "Return a list of notes of this email / thread. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"example": "",
+			"thread": "get_notes",
+			"thread_params": "cond = True"
 		},
 		{
 			"name": "get_sender",
 			"params": "",
-			"description": "Return a sender of this email.",
-			"example": ""
-
+			"description": "Return a sender of this email / thread. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"example": [
+				"print get_sender()",
+				">>> ['Soya Park <soya@mit.edu>']", 
+				"",
+				"def only_important():",
+				"   if 'important' in get_note():",
+				"      return True",
+				"   return False",
+				"print get_senders( cond = only_important )",
+				">>> [['David Karger <david@mit.edu>'], ['David Karger <david@mit.edu>']]"
+			],
+			"thread": "get_senders",
+			"thread_params": "cond = True"
 		},
 		{
 			"name": "get_subject",
 			"params": "",
-			"description": "Return a subject of this email.",
-			"example": ""
-
+			"description": "Return a subject of this email / thread. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"example": "",
+			"thread": "get_subjects",
+			"thread_params": "cond = True"
 		},
 		{
-			"name": "get_recipients",
+			"name": "get_recipient",
 			"params": "",
-			"description": "Return a list of recipients of this email.",
-			"example": ""
-
+			"description": "Return a list of recipients of this email. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"example": [
+				"print get_recipient()",
+				">>> ['Soya Park <soya@mit.edu>', 'Amy Zhang <zhang@mit.edu>']", 
+				"print get_recipients()", 
+				">>> [['Soya Park <soya@mit.edu>'], ['David Karger <david@mit.edu>', 'Amy Zhang <zhang@mit.edu>'], ['Soya Park <soya@mit.edu>', 'Amy Zhang <zhang@mit.edu>']]"],
+			"thread": "get_recipients",
+			"thread_params": "cond = True"
 		}
 	],
 	"methods": [
 		{
-			"name": "add_notes",
+			"name": "add_note",
 			"params": "flags",
-			"description": "Add note to email in the currently folder.",
+			"description": "Add note to email / thread in the currently folder. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
 			"example": [
 				"add_notes([“important”, “deadline”])"
-			]
+			],
+			"thread": "add_notes",
+			"thread_params": "flags, cond = True"
 		},
 		{
 			"name": "copy",
 			"params": "src_folder, dst_folder",
-			"description": "Copy this email from src_folder to dst_folder",
-			"example": ""
+			"description": "Copy this email from src_folder to dst_folder. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"example": "",
+			"thread": "copys",
+			"thread_params": "src_folder, dst_folder, cond = True"
 
 		},
 		{
 			"name": "delete",
 			"params": "",
-			"description": "Delete this email from the currently selected folder.",
-			"example": ""
+			"description": "Delete this email from the currently selected folder. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"example": "",
+			"thread": "deletes",
+			"thread_params": "flags, cond = True"
 
 		},
 		{
 			"name": "mark_read",
 			"params": "is_read",
-			"description": "If is_read is true, then mark the email as read, otherwise mark it as unread.",
-			"example": ""
+			"description": "If is_read is true, then mark the email as read, otherwise mark it as unread. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"example": "",
+			"thread": "mark_reads",
+			"thread_params": "flags, cond = True"
 
 		},
 		{
 			"name": "move",
 			"params": "src_folder, dst_folder",
-			"description": "Move this email from src_folder to dst_folder",
-			"example": ""
+			"description": "Move this email from src_folder to dst_folder. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"example": [
+				"move('INBOX', 'conference')",
+				"",
+				"def from_soya():",
+				"   if 'Soya Park <soya@mit.edu>' in get_sender():",
+				"      return True",
+				"   return False",
+				"moves('INBOX', 'conference', cond = from_soya)"
+			],
+			"thread": "moves",
+			"thread_params": "flags, cond = True"
 
 		},
 		{
-			"name": "remove_notes",
+			"name": "remove_note",
 			"params": "flags",
-			"description": "Remove one or more flags from this email in the currently selected folder. flags should be a list of strings.",
-			"example": ""
+			"description": "Remove one or more flags from this email in the currently selected folder. flags should be a list of strings. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"example": "",
+			"thread": "remove_notes",
+			"thread_params": "flags, cond = True"
 
 		}
 	],
