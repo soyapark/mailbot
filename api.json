@@ -3,7 +3,7 @@
 		{
 			"name": "get_content",
 			"params": "",
-			"description": "Return contents of this email / thread. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"description": "Return contents of this email / thread. \n Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
 			"example": "",
 			"thread": "get_contents",
 			"thread_params": "cond = True"
@@ -15,6 +15,7 @@
 			"example": [
 				"print get_date()",
 				">>> ['Wed, 29 Aug 2018 01:59:59 -0400']", 
+				" ",
 				"print get_dates()", 
 				">>> ['Wed, 29 Aug 2018 00:23:12 -0400', 'Wed, 29 Aug 2018 01:01:03 -0400', 'Wed, 29 Aug 2018 01:59:59 -0400']"
 			],
@@ -36,7 +37,7 @@
 			"example": [
 				"print get_sender()",
 				">>> ['Soya Park <soya@mit.edu>']", 
-				"",
+				" ",
 				"def only_important():",
 				"   if 'important' in get_note():",
 				"      return True",
