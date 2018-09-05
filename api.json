@@ -161,5 +161,20 @@
 			"example": ""
 
 		}
+	],
+	"mode": [
+		{
+			"name": "get_mode",
+			"params": "",
+			"description": "Get an index of a current email mode",
+			"example": ""
+		},
+		{
+			"name": "set_mode",
+			"params": "mode_index",
+			"description": "Change a current email mode",
+			"example": ""
+
+		}
 	]
 }
