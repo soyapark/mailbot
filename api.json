@@ -73,7 +73,7 @@
 		{
 			"name": "get_content",
 			"params": "",
-			"description": "Return contents of this email / thread. \n\n Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"description": "Return a content of this email.",
 			"example": "",
 			"thread": "get_contents",
 			"thread_params": "cond = True"
@@ -81,7 +81,7 @@
 		{
 			"name": "get_date",
 			"params": "",
-			"description": "Return arrival date of this email / thread. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"description": "Return an arrival date of this email.",
 			"example": [
 				"print get_date()",
 				">>> ['Wed, 29 Aug 2018 01:59:59 -0400']"
@@ -90,9 +90,9 @@
 			"thread_params": "cond = True"
 		},
 		{
-			"name": "get_note",
+			"name": "get_notes",
 			"params": "",
-			"description": "Return a list of notes of this email / thread. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"description": "Return a list of notes of this email.",
 			"example": "",
 			"thread": "get_notes",
 			"thread_params": "cond = True"
@@ -117,11 +117,11 @@
 			"thread_params": "cond = True"
 		},
 		{
-			"name": "get_recipient",
+			"name": "get_recipients",
 			"params": "",
 			"description": "Return a list of recipients of this email.",
 			"example": [
-				"print get_recipient()",
+				"print get_recipients()",
 				">>> ['Soya Park <soya@mit.edu>', 'Amy Zhang <zhang@mit.edu>']"
 			],
 			"thread": "get_recipients",
@@ -135,7 +135,7 @@
 			"description": "Get an interaction history with this recipient. To specify the range of time, set parameter hours. Parameter cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails exchanged with a contact of the email.",
 			"example": [
 				"def draft_email():",
-				"   if 'draft' in get_note():",
+				"   if 'draft' in get_notes():",
 				"      return True",
 				"   return False",
 				"",
@@ -161,7 +161,7 @@
 		{
 			"name": "add_notes",
 			"params": "flags",
-			"description": "Add note to email / thread in the currently folder. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"description": "Add note to email in the currently folder.",
 			"example": [
 				"add_notes([“important”, “deadline”])"
 			],
@@ -170,8 +170,8 @@
 		},
 		{
 			"name": "copy",
-			"params": "src_folder, dst_folder",
-			"description": "Copy this email from src_folder to dst_folder. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"params": "dst_folder",
+			"description": "Copy this email from the current folder to dst_folder. If folder dst_folder does not exist, our engine creates a new folder with the name dst_folder",
 			"example": "",
 			"thread": "copys",
 			"thread_params": "src_folder, dst_folder, cond = True"
@@ -180,7 +180,7 @@
 		{
 			"name": "delete",
 			"params": "",
-			"description": "Delete this email from the currently selected folder. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"description": "Delete this email from the currently selected folder.",
 			"example": "",
 			"thread": "deletes",
 			"thread_params": "flags, cond = True"
@@ -197,17 +197,17 @@
 		},
 		{
 			"name": "move",
-			"params": "src_folder, dst_folder",
-			"description": "Move this email from src_folder to dst_folder. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
+			"params": "dst_folder",
+			"description": "Move this email to dst_folder.  If folder dst_folder does not exist, our engine creates a new folder with the name dst_folder",
 			"example": [
-				"move('INBOX', 'conference')"
+				"move('conference')"
 			],
 			"thread": "moves",
 			"thread_params": "flags, cond = True"
 
 		},
 		{
-			"name": "remove_note",
+			"name": "remove_notes",
 			"params": "flags",
 			"description": "Remove one or more flags from this email in the currently selected folder. flags should be a list of strings. <br>Developers can selectively retrieve some emails of the thread by using parameter cond. cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails in the thread.",
 			"example": "",
