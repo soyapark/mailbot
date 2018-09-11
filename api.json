@@ -139,8 +139,8 @@
 				"      return True",
 				"   return False",
 				"",
-				"print get_history('soya@mit.edu', 3, 'lunch' draft_email) ",
-				">>> {'received_emails': 3, 'sent_emails': 5, 'cond': 2}"
+				"print get_history('soya@mit.edu', 3, draft_email) ",
+				">>> {'received_emails': 3, 'cond': 2}"
 			]
 		},
 		{
