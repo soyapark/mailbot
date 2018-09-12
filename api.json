@@ -134,8 +134,8 @@
 			"params": "email, hours = 24, cond = True",
 			"description": "Get an interaction history with this recipient. To specify the range of time, set parameter hours. Parameter cond should be a callable that returns boolean. Default value of cond is True and it will retrieve from all emails exchanged with a contact of the email.",
 			"example": [
-				"def draft_email():",
-				"   if 'draft' in get_notes():",
+				"def draft_email(email):",
+				"   if 'draft' in email.get_notes():",
 				"      return True",
 				"   return False",
 				"",
