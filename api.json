@@ -240,6 +240,15 @@
 			"thread": "remove_notes",
 			"thread_params": "flags, cond = True"
 
+		},
+		{
+			"name": "send",
+			"params": "subject, recipient_address, body",
+			"description": "send an email",
+			"example": "",
+			"thread": "remove_notes",
+			"thread_params": "flags, cond = True"
+
 		}
 	],
 	"folder": [
