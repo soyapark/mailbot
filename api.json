@@ -156,7 +156,7 @@
 				"   return False",
 				"",
 				"print get_history('soya@mit.edu', 3, draft_email) ",
-				">>> {'received_emails': 3, 'cond': 2}"
+				">>> {'received_emails': 5, 'cond': 2}"
 			]
 		},
 		{
